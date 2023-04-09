@@ -1,0 +1,144 @@
+<%- include("partials/header.ejs") %>
+
+<div class="main">
+    <div class="headline">
+        <% mainFeatures.forEach(function(features) { %>
+            <% const headlineImg = features.postImage %>
+        <div class="headline-img">
+            <img src="/images/<%= headlineImg %>" >
+        </div>
+        <div class="headline-txt">
+            <h1 class="headline-title"><%= features.title %></h1>
+            <p class="headline-content"><%= features.content %></p>
+            <div class="author-profile">
+                <div class="author-img">
+                    <img src="/images/<%= features.authorImage %>">
+                </div>
+                <div class="author-date">
+                    <p class="auther-name"><%= features.author %></p>
+                    <p><%= date %></p>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <div class="features-list">
+        <% subFeatures.forEach(function(features) { %>
+            <% const postImg = features.postImage %>
+            <% const postTitle = features.title %>
+            <% const postAuthor = features.author %>
+            <% const authorImg = features.authorImage %>
+            <% const postExtract = features.extract %>
+                <div class="features">
+                        <div class="features-img">
+                            <img src="/images/<%= postImg %>">
+                        </div>
+                        <div class="features-title-box">
+                            <h2 class="features-title"><%- postTitle %></h2>
+                            <p><%= postExtract %></p>
+                        </div>
+                        <div class="author-profile">
+                            <div class="author-img">
+                                <img src="/images/<%= authorImg %>">
+                            </div>
+                            <div class="author-date">
+                                <p class="auther-name"><%= postAuthor %></p>
+                                <p><%= date %></p>
+                            </div>
+                        </div>
+                </div>
+        <% }) %>
+    </div>
+</div>
+<div class="open-source">
+    <p class="open-source-title">Open Source</p>
+    <div class="features-list">
+        <% openSourceFeatures.forEach(function(features) { %>
+            <% const postImg = features.postImage %>
+            <% const postTitle = features.title %>
+            <% const postAuthor = features.author %>
+            <% const postExtract = features.extract %>
+            <% const authorImg = features.authorImage %>
+                <div class="features">
+                        <div class="features-img">
+                            <img src="/images/<%= postImg %>">
+                        </div>
+                        <div class="features-title-box">
+                            <h2 class="features-title"><%= postTitle %></h2>
+                            <p><%= postExtract %></p>
+                        </div>
+                        <div class="author-profile">
+                            <div class="author-img">
+                                <img src="/images/<%= authorImg %>">
+                            </div>
+                            <div class="author-date">
+                                <p class="auther-name"><%= postAuthor %></p>
+                                <p><%= date %></p>
+                            </div>
+                        </div>
+                </div>
+        <% }) %>
+    </div>
+</div>
+<div class="open-source">
+    <p class="open-source-title">People</p>
+    <div class="features-list">
+        <% peopleFeatures.forEach(function(features) { %>
+            <% const postImg = features.postImage %>
+            <% const postTitle = features.title %>
+            <% const postAuthor = features.author %>
+            <% const postExtract = features.extract %>
+            <% const authorImg = features.authorImage %>
+                <div class="features">
+                        <div class="features-img">
+                            <img src="/images/<%= postImg %>">
+                        </div>
+                        <div class="features-title-box">
+                            <h2 class="features-title"><%= postTitle %></h2>
+                            <p><%= postExtract %></p>
+                        </div>
+                        <div class="author-profile">
+                            <div class="author-img">
+                                <img src="/images/<%= authorImg %>">
+                            </div>
+                            <div class="author-date">
+                                <p class="auther-name"><%= postAuthor %></p>
+                                <p><%= date %></p>
+                            </div>
+                        </div>
+                </div>
+        <% }) %>
+    </div>
+</div>
+<div class="open-source">
+    <p class="open-source-title">Artificial Intelligence and Machine Learning</p>
+    <div class="features-list">
+        <% intelligenceFeatures.forEach(function(features) { %>
+            <% const postImg = features.postImage %>
+            <% const postTitle = features.title %>
+            <% const postAuthor = features.author %>
+            <% const postExtract = features.extract %>
+            <% const authorImg = features.authorImage %>
+                <div class="features">
+                        <div class="features-img">
+                            <img src="/images/<%= postImg %>">
+                        </div>
+                        <div class="features-title-box">
+                            <h2 class="features-title"><%= postTitle %></h2>
+                            <p><%= postExtract %></p>
+                        </div>
+                        <div class="author-profile">
+                            <div class="author-img">
+                                <img src="/images/<%= authorImg %>">
+                            </div>
+                            <div class="author-date">
+                                <p class="auther-name"><%= postAuthor %></p>
+                                <p><%= date %></p>
+                            </div>
+                        </div>
+                </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
